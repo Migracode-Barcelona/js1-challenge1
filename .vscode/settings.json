@@ -1,9 +1,7 @@
 {
     "files.exclude": {
-        ".content": true,
-        ".devcontainer": true,
-        ".vscode": true,
-	"codeswing.json": true,
-        ".gitignore": true
+        "codeswing.json": true,
+        ".*": true,
+        "package.json": true
     }
 }

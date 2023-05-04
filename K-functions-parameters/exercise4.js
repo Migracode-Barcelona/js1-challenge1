@@ -1,5 +1,7 @@
-// Declare your function first
+// create a function called sum
 
-// Call the function and assign to a variable `sum`
+// To test it, store it in a variable called result
 
-console.log(sum);
+console.log(result);
+
+module.exports = { sum };

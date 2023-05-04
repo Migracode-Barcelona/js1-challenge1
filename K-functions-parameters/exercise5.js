@@ -1,5 +1,6 @@
-// Declare your function here
+// Declare your function called createLongGreeting
 
-const greeting = createLongGreeting("Daniel", 30);
-
+// To test it, store it in a variable called greeting
 console.log(greeting);
+
+module.exports = { createLongGreeting };

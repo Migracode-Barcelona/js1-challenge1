@@ -1,24 +1,19 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+// Import the function to be tested
+const { greetingMentors } = require('../../L-functions-nested/exercise.js');
 
-const { execSync } = require('child_process');
-const path = require('path');
+describe('greetingMentors', () => {
+  it('should log the correct greeting message to the console', () => {
+    // Mock the console.log method
+    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
 
-const exercisePath = path.join(__dirname, '../../L-functions-nested/exercise.js');
+    // Call the function to be tested
+    const name = 'John';
+    greetingMentors(name);
 
-const expectedOutput = ['HELLO DANIEL', 'HELLO IRINA', 'HELLO MIMI', 'HELLO ROB', 'HELLO YOHANNES'];
+    // Check if the console.log method was called with the correct message
+    expect(consoleSpy).toHaveBeenCalledWith(`HELLO ${name.toUpperCase()}`);
 
-try {
-  const output = execSync(`node ${exercisePath}`, { stdio: 'pipe' }).toString().trim().split('\n');
-
-  if (JSON.stringify(output) === JSON.stringify(expectedOutput)) {
-    console.log('Test passed!');
-  } else {
-    console.log(`Test failed. Expected output: ${expectedOutput.join(', ')}. Actual output: ${output.join(', ')}`);
-  }
-} catch (error) {
-  console.error('Test failed.', error);
-}
+    // Restore the console.log method
+    consoleSpy.mockRestore();
+  });
+});

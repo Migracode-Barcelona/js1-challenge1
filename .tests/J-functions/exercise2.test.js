@@ -1,5 +1,5 @@
 // Import the function to be tested
-const { halve } = require('../../J-functions/exercise2.js');
+const { triple } = require('../../J-functions/exercise2.js');
 
 describe('triple', () => {
   it('should return the correct result when called with a positive number', () => {

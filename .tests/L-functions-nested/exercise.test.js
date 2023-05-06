@@ -7,7 +7,7 @@ describe('greetingMentors', () => {
     const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
 
     // Call the function to be tested
-    const name = 'John';
+    const name = 'Daniel';
     greetingMentors(name);
 
     // Check if the console.log method was called with the correct message
